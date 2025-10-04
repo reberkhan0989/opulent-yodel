@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="24dp"
+        android:layout_gravity="center"
+        android:elevation="8dp"
+        android:minWidth="320dp"
+        android:maxWidth="420dp"
+        android:layout_margin="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Top image gallery with margin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_intro1"
+                android:contentDescription="Loan Banner 1"
+                android:layout_marginEnd="6dp" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_intro2"
+                android:contentDescription="Loan Banner 2"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Title and partner -->
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Riya DSA"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#222"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/text_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We are partnered with Airtel"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:textColor="#E40000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Scrollable paragraph only -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="ifContentScrolls"
+            android:fillViewport="true"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="At Riya DSA, we make loans simple and accessible. Many people face rejection because of low CIBIL scores or limited documents. That’s why we have partnered with Airtel Flexi Credit to provide loans on the basis of an Agent Guarantee Letter.\n\nWhy choose us?\n\n✅ Loan approval on agent guarantee, not just CIBIL\n\n✅ No hidden charges, 100% transparent process\n\n✅ Quick approvals and hassle-free application\n\nOur mission is to help you get the financial support you need without unnecessary hurdles."
+                    android:textSize="16sp"
+                    android:textColor="#444"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:id="@+id/text_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---\n\nUser Agreement\n\nBy using this app, you agree that:\n\n1. You will provide correct details during the loan process.\n2. Loan approval depends on verification by our agents and partners.\n3. You will repay your loan as per the terms shared with you."
+                    android:textSize="15sp"
+                    android:textColor="#333"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:id="@+id/text_permissions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---\n\nPermissions Required\n\nTo provide smooth service, our app needs:\n\nNotification Access → For loan updates, EMI reminders, and approval alerts.\nAgent Verification Access → To confirm your guarantee details.\n\n⚠️ Without these permissions, the app will not work and your loan application cannot be processed."
+                    android:textSize="15sp"
+                    android:textColor="#333"
+                    android:layout_marginBottom="14dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Checkboxes -->
+        <CheckBox
+            android:id="@+id/checkbox_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I agree to the User Agreement"
+            android:textSize="15sp"
+            android:textColor="@color/airtel_red"
+            android:buttonTint="@color/airtel_red"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I allow Notification Access"
+            android:textSize="15sp"
+            android:textColor="@color/airtel_red"
+            android:buttonTint="@color/airtel_red"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/checkbox_agent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I allow agent verification access"
+            android:textSize="15sp"
+            android:textColor="@color/airtel_red"
+            android:buttonTint="@color/airtel_red"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/checkbox_understand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I understand the app cannot work without all permissions"
+            android:textSize="15sp"
+            android:textColor="@color/airtel_red"
+            android:buttonTint="@color/airtel_red"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:checked="false"
+            android:layout_marginBottom="18dp" />
+
+        <!-- Fixed confirm button at the bottom -->
+        <Button
+            android:id="@+id/button_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm &amp; Proceed"
+            android:enabled="false"
+            android:backgroundTint="@color/airtel_button"
+            android:textColor="@color/airtel_button_text"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+</FrameLayout>
