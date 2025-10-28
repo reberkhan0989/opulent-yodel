@@ -6,18 +6,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-// ...rest of the file unchanged...package com.example.mywebviewapp;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.widget.ImageView;
-
 public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // If a crash log was saved by the global handler, show it so the user can share it
+        java.io.File crashFile = new java.io.File(getFilesDir(), "last_crash.txt");
+        if (crashFile.exists()) {
+            Intent crashIntent = new Intent(this, CrashViewerActivity.class);
+            startActivity(crashIntent);
+            // do not finish here; allow user to clear or share, then proceed
+            return;
+        }
+
         setContentView(R.layout.activity_splash);
 
         ImageView logo = findViewById(R.id.splash_logo);

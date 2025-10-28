@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/opulent-yodel/MyWebViewApp/app/.cxx/Debug/443f1b64/arm64-v8a",
+  "command": "/home/codespace/android-sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/codespace/android-sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dsecurity_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/security.dir/security.cpp.o -c /workspaces/opulent-yodel/MyWebViewApp/app/src/main/cpp/security.cpp",
+  "file": "/workspaces/opulent-yodel/MyWebViewApp/app/src/main/cpp/security.cpp"
+}
+]

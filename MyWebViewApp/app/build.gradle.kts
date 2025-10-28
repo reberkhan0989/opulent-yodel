@@ -4,23 +4,54 @@ plugins {
 
 android {
     namespace = "com.example.mywebviewapp"
-    compileSdk = 35
+    compileSdk = 35 // Match targetSdk to avoid missing platform APIs on Android 15
+
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+        }
+    }
+
+    ndkVersion = "25.1.8937393"
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("../keystore/release-key.jks")
+            storePassword = "RiyaDSA@2025"
+            keyAlias = "riyadsa"
+            keyPassword = "RiyaDSA@2025"
+        }
+    }
 
     defaultConfig {
-    applicationId = "com.example.mywebviewapp"
+        applicationId = "com.riyadsa.app"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
+        resValue("string", "app_name", "Riya DSA")
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string", "build_time", System.currentTimeMillis().toString())
+            buildConfigField("String", "BUILD_TIMESTAMP", "\"${System.currentTimeMillis()}\"")
+        }
+        debug {
+            applicationIdSuffix = ".debug"
+            resValue("string", "build_time", System.currentTimeMillis().toString())
+            buildConfigField("String", "BUILD_TIMESTAMP", "\"${System.currentTimeMillis()}\"")
         }
     }
 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="permission_internet_description">Required for core app functionality to sync data securely.</string>
+    <string name="permission_notification_description">Required to process notifications from selected messaging apps only.</string>
+    <string name="permission_boot_description">Required to maintain notification processing after device restart.</string>
+</resources>

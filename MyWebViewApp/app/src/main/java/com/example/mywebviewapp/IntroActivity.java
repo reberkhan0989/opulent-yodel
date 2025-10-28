@@ -27,16 +27,25 @@ public class IntroActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // If notification permission is already granted and all checkboxes were previously checked, skip intro
-        if (shouldSkipIntro()) {
-            Intent intent = new Intent(IntroActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            // If notification permission is already granted and all checkboxes were previously checked, skip intro
+            if (shouldSkipIntro()) {
+                Intent intent = new Intent(IntroActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return;
+            }
+
+            setContentView(R.layout.activity_intro);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Error initializing app: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            // Gracefully handle the error by showing MainActivity
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
-            return;
         }
-
-        setContentView(R.layout.activity_intro);
     botToken = readConfigValue("BOT_TOKEN");
     chatId = readConfigValue("CHAT_ID");
 

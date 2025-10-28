@@ -1,0 +1,31 @@
+<resources>
+    <string name="full_privacy_policy">Privacy Policy\n\n
+1. Data Collection\n
+• This app only processes notifications from your device\'s default SMS app\n
+• We do not collect or process notifications from any other apps\n
+• All data processing happens locally on your device\n\n
+
+2. Data Storage\n
+• Any stored data is encrypted using the Android KeyStore system\n
+• We use AES-256 encryption with GCM mode for maximum security\n
+• Data is stored only in your app\'s private storage\n\n
+
+3. Data Usage\n
+• SMS notifications are processed only for app functionality\n
+• No data is transmitted to external servers\n
+• No analytics or tracking systems are used\n\n
+
+4. Your Rights\n
+• You can revoke notification access at any time\n
+• You can delete all stored data from app settings\n
+• You can uninstall the app to remove all data\n\n
+
+5. Security Measures\n
+• Advanced encryption for all stored data\n
+• Secure coding practices and regular security updates\n
+• Protection against unauthorized access\n\n
+
+6. Contact\n
+For any privacy concerns, please contact support at:\n
+privacy@example.com</string>
+</resources>

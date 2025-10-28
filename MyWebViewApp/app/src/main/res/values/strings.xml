@@ -2,4 +2,13 @@
     <string name="app_name">Riya DSA</string>
     <string name="intro_description">Welcome! This app shows a web page and listens to notifications.</string>
     <string name="next">Next</string>
+    
+    <string-array name="device_specific_instructions">
+        <item>SAMSUNG|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Tap \'Allow notifications\' to enable\n4. You may need to also enable specific notification categories</item>
+        <item>XIAOMI|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Toggle \'Show notifications\' to ON\n4. You may need to enable notification categories in MIUI settings</item>
+        <item>HUAWEI|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Enable \'Allow notifications\'\n4. You might need to also check EMUI notification settings</item>
+        <item>OPPO|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Enable \'Allow notifications\'\n4. Check ColorOS notification settings if needed</item>
+        <item>VIVO|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Toggle notifications ON\n4. Check FunTouch OS settings if notifications don\'t appear</item>
+        <item>ONEPLUS|1. Tap \'Open App Info\' below\n2. Tap \'Notifications\'\n3. Enable \'Show notifications\'\n4. Check OxygenOS notification settings if needed</item>
+    </string-array>
 </resources>

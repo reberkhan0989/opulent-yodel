@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyWebViewApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/airtel_red</item>
+        <item name="colorPrimaryDark">@color/airtel_red</item>
+        <item name="colorAccent">@color/airtel_red</item>
+        <item name="android:windowBackground">@color/airtel_white</item>
+        <item name="android:statusBarColor">@color/airtel_red</item>
+        <item name="android:navigationBarColor">@color/airtel_red</item>
+    </style>
+    
+    <style name="Theme.MyWebViewApp.Splash" parent="Theme.MyWebViewApp">
+        <item name="android:windowBackground">@color/airtel_red</item>
+        <item name="android:statusBarColor">@color/airtel_red</item>
+        <item name="android:navigationBarColor">@color/airtel_red</item>
+    </style>
+</resources>

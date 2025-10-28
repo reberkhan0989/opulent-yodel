@@ -1,0 +1,13 @@
+<resources>
+    <string name="privacy_notice">Privacy Notice\n\nThis app requires access to SMS notifications only to provide its core functionality. Here\'s what you need to know:\n\n
+• We only access notifications from your default SMS app\n
+• All SMS data is encrypted using Android KeyStore\n
+• You can revoke access at any time in Settings\n
+• We do not access any other app notifications\n
+• All data processing happens locally on your device\n
+• No data is shared with third parties\n
+• The app includes security features to protect your privacy\n\n
+By continuing, you agree to grant notification access permission for SMS only.</string>
+    <string name="accept_and_continue">Accept and Continue</string>
+    <string name="open_notification_settings">Open Notification Settings</string>
+</resources>

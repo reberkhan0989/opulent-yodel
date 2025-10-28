@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/workspaces/opulent-yodel/MyWebViewApp/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/codespace/android-sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/workspaces/opulent-yodel/MyWebViewApp/app/.cxx/Debug/443f1b64/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/codespace/android-sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/workspaces/opulent-yodel/MyWebViewApp/app/.cxx/Debug/443f1b64/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "security::@6890427a1f51a3e7e1df": {
+      "artifactName": "security",
+      "abi": "x86_64",
+      "output": "/workspaces/opulent-yodel/MyWebViewApp/app/build/intermediates/cxx/Debug/443f1b64/obj/x86_64/libsecurity.so",
+      "runtimeFiles": []
+    }
+  }
+}
